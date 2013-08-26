@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $('.other-function-container').hide();
   $('.attendance-container').hide();
-
+  $('#success-grid').hide();
   $('.behavior-container .student-icon').click(function() {
       $(this).toggleClass('active');
   });
@@ -25,6 +25,12 @@ $(document).ready(function() {
                       course_id: course_id}
            
     $.post(url, dataToSend);
+
+    $("#success-grid").show();
+    $("#success-grid").fadeOut(1500, function () {
+      $(this).remove();
+    });
+
     $('.student-icon').removeClass('active');
     data = [];
   });
@@ -156,7 +162,7 @@ $(document).ready(function() {
   });
 
 // =====================MASTERY ACTIONS======================
-
+  
 });
 
 

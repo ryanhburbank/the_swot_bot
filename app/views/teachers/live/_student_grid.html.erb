@@ -1,9 +1,5 @@
 <div class="grid-container">
   <div class="icon-container">
-    <% if flash[:update_success] %>
-      <p class="flash-notice"><%= flash[:update_success] %></p>
-    <% end %>
-
     <ul id="student-icon-list">
 
       <% @students.each do |student| %>
@@ -19,4 +15,5 @@
 
     </ul>
   </div>
+    <p id="success-grid" class="live-grid-success-save">Successfully Saved</p>
 </div>
